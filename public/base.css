@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body { 
+	font-family: 'Montserrat', sans-serif;
+}
+
+#user {
+	text-align: center;
+	display: block;
+	position: absolute;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+		 -o-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+}
+
+#user input {
+	margin-bottom: 5px;
+}
+
+#user button {
+	padding: 2px 25px; 
+}
+
+#chat { 
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	width: 100%;
+}
+
+#chat input { 
+	padding: 2px; 
+	width: 80%; 
+	margin-right: 0.5%; 
+}
+
+button { 
+	background: red; 
+	padding: 2px 25px;
+	color: white; 
+}
+
+#messages { 
+	width: 85%;
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+
+#messages li { 
+	padding: 5px 10px; 
+	font-size: 13px; 
+}
+
+#messages li:nth-child(even) { 
+	background: #eeeeee; 
+}
+
+#join {
+	color: red;
+	font-style: italic;
+}
+
+p {
+	display: block;
+	width: 250px;
+	color: red;
+	font-size: 13px;
+}
+
+h1 {
+	color: red;
+}
+
+#date-header {
+	font-style: none;
+	text-align: center;
+	color: gray;
+}
+
+.date {
+	font-style: none!important; 
+	color: gray;
+	padding-right: 10px;
+}
+
+#users {
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 0px 10px 0px 10px;
+	box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+	display: none;
+	right: 10px;
+	position: absolute;
+}
+
+#users h4 {
+	text-align: center;
+}
+
+#users ul {
+	margin-left: -10%;
+}

@@ -1,0 +1,2 @@
+# chat room built with socket.io
+Final project for my Computer Networks class. A web app built using Node.js and socket.io. Users enter their username when they enter the room and can then start sending messages to other connected users. Pretty straightforward.
