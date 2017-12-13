@@ -64,6 +64,11 @@ button {
 	font-style: italic;
 }
 
+#disconnect {
+	color: gray;
+	font-style: italic;
+}
+
 p {
 	display: block;
 	width: 250px;

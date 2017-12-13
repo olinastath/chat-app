@@ -70,3 +70,33 @@ socket.on('join', (date, data, users) => {
 	document.querySelector('#users').appendChild(ul);
 	document.querySelector('#num').textContent = count;
 });
+
+
+socket.on('disconnect', (date, data, users) => {
+	let li = document.createElement('li');
+	let span = document.createElement('span');
+	span.textContent = date;
+	span.className = 'date';
+	li.appendChild(span);
+	span = document.createElement('span');
+	span.textContent = data;
+	span.id = 'disconnect';
+	li.appendChild(span);
+	messages.appendChild(li);
+	let list = document.querySelector('#users-list');
+	if (list) {
+		list.parentNode.removeChild(list);
+	}
+	document.querySelector('#users').style.display = 'block';
+	let ul = document.createElement('ul');
+	ul.id = "users-list";
+	let count = 0;
+	for (const u in users) {
+		count ++;
+		li = document.createElement('li');
+		li.textContent = users[u];
+		ul.appendChild(li);
+	}
+	document.querySelector('#users').appendChild(ul);
+	document.querySelector('#num').textContent = count;
+});

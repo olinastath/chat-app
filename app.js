@@ -45,6 +45,22 @@ io.on('connect', (socket) => {
 		}
 		io.emit('message', users[socket.id], date, data);
 	});
+
+	socket.on('disconnect', () => {
+		const username = users[socket.id];
+		delete users[socket.id];
+		let date = new Date();
+		if (date.getHours() < 10 && date.getMinutes() < 10) {
+			date = '0' + date.getHours() + ':0' + date.getMinutes();
+		} else if (date.getHours() < 10) {
+			date = '0' + date.getHours() + ':' + date.getMinutes();
+		} else if (date.getMinutes() < 10) {
+			date = date.getHours() + ':0' + date.getMinutes();
+		} else {
+			date = date.getHours() + ':' + date.getMinutes();	
+		}
+		io.emit('disconnect', date, username + ' disconnected', users);
+	});
 });
 
 server.listen(3000);
