@@ -21,3 +21,5 @@ The console should read "listening on port 3000." Then, navigate to localhost:30
 8. if the user disconnects from the chat room (i.e. closes the window), that triggers the socket​ . ​ on​ ( ​ 'disconnect'​ , ​ ​... )​ function on the server side.
 9. on 'disconnect​' on the server side, the server deletes the user's username from the users​ object (so the user or someone else can use the same username at a later time in the same session and so that the correct number of online users is displayed) and then emits a 'disconnect​' to all clients
 10. on 'disconnect​' on the client side, a message indicating the time and the username of the client who disconnected is appended to the chat room and the ‘Online Users' table is updated
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y225QO7)
